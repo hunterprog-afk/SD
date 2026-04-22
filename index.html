@@ -56,7 +56,7 @@ nav.shadow{box-shadow:0 4px 24px rgba(11,95,165,.08);}
 .mobile-menu-btn.active span::before{top:0;transform:rotate(45deg);}
 .mobile-menu-btn.active span::after{top:0;transform:rotate(-45deg);}
 
-.hero{background:linear-gradient(135deg,var(--blue-soft) 0%,var(--cream) 100%);padding:90px 5% 80px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;border-bottom:1px solid var(--border-light);position:relative;overflow:hidden;}
+.hero{background:linear-gradient(135deg,var(--blue-soft) 0%,var(--cream) 100%);padding:90px 5% 80px;display:flex;flex-direction:column;align-items:flex-start;gap:0;border-bottom:1px solid var(--border-light);position:relative;overflow:hidden;text-align:left;}
 .hero::before{content:'';position:absolute;right:-120px;top:-120px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(11,95,165,.08) 0%,transparent 70%);z-index:0;}
 .hero::after{content:'';position:absolute;left:-80px;bottom:-80px;width:300px;height:300px;border-radius:50%;background:radial-gradient(circle,rgba(244,164,66,.1) 0%,transparent 70%);z-index:0;}
 .hero-content{position:relative;z-index:1;}
@@ -109,7 +109,11 @@ section{padding:88px 5%;}
 .sec-rule{width:48px;height:3px;background:var(--blue);margin-bottom:36px;border-radius:2px;}
 
 #servizi{background:#fff;}
-.services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:12px;}
+.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:12px;}
+.svc:nth-child(4) .svc-top-bar{background:var(--amber);}
+.svc:nth-child(4) .svc-num{color:var(--amber);}
+.svc:nth-child(4) .svc-icon{background:var(--amber-light);}
+.svc:nth-child(4) .svc-list li::before{color:var(--amber);}
 .svc{background:#fff;padding:40px 32px;position:relative;overflow:hidden;transition:all .3s;border:1px solid var(--border-light);border-radius:12px;}
 .svc:hover{box-shadow:0 12px 32px rgba(11,95,165,.1);transform:translateY(-4px);border-color:var(--blue-light);}
 .svc-top-bar{position:absolute;top:0;left:0;right:0;height:4px;transform:scaleX(0);transition:transform .4s;transform-origin:left;border-radius:12px 12px 0 0;}
@@ -311,7 +315,7 @@ section{padding:88px 5%;}
   section{padding:50px 5%;}
   .sec-title{font-size:1.55rem;}
   .sec-rule{margin-bottom:24px;}
-  .services-grid,.vitals-grid,.process-grid,.valori-grid,.why-grid{grid-template-columns:1fr;gap:16px;}
+  .services-grid{grid-template-columns:repeat(2,1fr);gap:16px;}
   .pazienti-grid{grid-template-columns:1fr;gap:14px;}
   .manifesto{padding:50px 5%;}
   .manifesto-grid{grid-template-columns:1fr;gap:28px;}
@@ -340,19 +344,7 @@ section{padding:88px 5%;}
 </head>
 <body>
 
-<div class="topbar">
-  <span class="topbar-left">CareS · DediCare Solutions S.R.L.S. · Via Roma 80, Segrate (MI)</span>
-  <div class="topbar-right">
-    <a href="tel:+393287730194">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-      +39 328 773 0194
-    </a>
-    <a href="mailto:info@dedicaresolutions.it">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-      info@dedicaresolutions.it
-    </a>
-  </div>
-</div>
+
 
 <nav id="nav">
   <a href="#" class="nav-logo">
@@ -363,7 +355,7 @@ section{padding:88px 5%;}
         <circle cx="55" cy="30" r="7" fill="#111"/>
       </svg>
     </div>
-    <span class="nav-brand">Care<b>S</b></span>
+    <span class="nav-brand">Dedicare <b>Solutions</b></span>
   </a>
   <ul class="nav-links" id="navLinks">
     <li><a href="#servizi">Servizi</a></li>
@@ -390,18 +382,13 @@ section{padding:88px 5%;}
     </div>
     <div class="hero-badge reveal d1">Assistenza Sanitaria Professionale · Segrate, Milano</div>
     <h1 class="reveal d2">Cura Eccellente<br/>e <em>Profondamente<br/>Personalizzata</em></h1>
-    <p class="hero-sub reveal d3">CareS affianca con dedizione assoluta anziani, adulti, bambini e disabili nel delicato percorso di cura — domiciliare, ospedaliero e in ogni spostamento.</p>
+    <p class="hero-sub reveal d3">Dedicare Solutions affianca con dedizione assoluta anziani, adulti, bambini e disabili nel delicato percorso di cura — domiciliare, ospedaliero e in ogni spostamento.</p>
     <div class="hero-btns reveal d4">
       <a href="tel:+393287730194" class="btn-primary">Richiedi Assistenza</a>
       <a href="#servizi" class="btn-outline">Scopri i Servizi</a>
     </div>
   </div>
-  <div class="hero-visual reveal-r">
-    <div class="hero-card"><div class="hero-card-icon hc-blue"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#0B5FA5" stroke-width="1.7"><rect x="9" y="2" width="6" height="20" rx="1"/><rect x="2" y="9" width="20" height="6" rx="1"/></svg></div><div><h4>Assistenza Infermieristica</h4><p>Cure cliniche avanzate a domicilio e in ospedale</p><div class="hero-card-badge hcb-blue">Servizio attivo 24/7</div></div></div>
-    <div class="hero-card"><div class="hero-card-icon hc-teal"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#15A89A" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><div><h4>Operatori Socio-Sanitari (OSS)</h4><p>Supporto umano e qualificato per la vita quotidiana</p><div class="hero-card-badge hcb-teal">Personalizzato</div></div></div>
-    <div class="hero-card"><div class="hero-card-icon hc-coral"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#E86A4C" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg></div><div><h4>Servizi & Trasporto 24/7</h4><p>Reperibilità ininterrotta per ogni emergenza sanitaria</p><div class="hero-card-badge hcb-coral">Emergenze h24</div></div></div>
-    <div class="hero-card"><div class="hero-card-icon hc-amber"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F4A442" stroke-width="1.7"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><div><h4>Parametri Vitali</h4><p>Misurazione gratuita prima di ogni prestazione</p><div class="hero-card-badge hcb-amber">Incluso · Gratuito</div></div></div>
-  </div>
+  
 </div>
 
 <div class="stats-bar">
@@ -425,6 +412,7 @@ section{padding:88px 5%;}
     <div class="svc reveal d1"><div class="svc-top-bar"></div><div class="svc-num">01 — Infermieri</div><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#0B5FA5" stroke-width="1.7"><rect x="9" y="2" width="6" height="20" rx="1"/><rect x="2" y="9" width="20" height="6" rx="1"/></svg></div><h3>Assistenza Infermieristica</h3><p>Interventi infermieristici professionali in ambiente ospedaliero e domiciliare, condotti da personale abilitato con competenze cliniche avanzate e costantemente aggiornate.</p><ul class="svc-list"><li>Somministrazione terapie e farmaci</li><li>Monitoraggio parametri vitali</li><li>Medicazioni e gestione ferite</li><li>Educazione terapeutica al paziente</li><li>Supporto post-operatorio</li></ul></div>
     <div class="svc reveal d2"><div class="svc-top-bar"></div><div class="svc-num">02 — OSS</div><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#15A89A" stroke-width="1.7"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><h3>Operatori Socio-Sanitari</h3><p>I nostri OSS offrono un supporto qualificato e premuroso per la cura quotidiana della persona, preservandone la dignità, l'autonomia e il benessere psico-fisico.</p><ul class="svc-list"><li>Igiene personale e mobilizzazione</li><li>Assistenza nell'alimentazione</li><li>Supporto emotivo e compagnia</li><li>Stimolazione cognitiva</li><li>Coordinamento con i familiari</li></ul></div>
     <div class="svc reveal d3"><div class="svc-top-bar"></div><div class="svc-num">03 — 24/7</div><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#E86A4C" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg></div><h3>Servizi & Trasporto 24/7</h3><p>Reperibilità ininterrotta per emergenze sanitarie urgenti, trasporto protetto e accompagnamento durante visite specialistiche, terapie e spostamenti di ogni natura.</p><ul class="svc-list"><li>Pronto intervento h24</li><li>Trasporto sanitario assistito</li><li>Accompagnamento a visite</li><li>Assistenza durante ricoveri</li><li>Gestione emergenze domiciliari</li></ul></div>
+    <div class="svc reveal d4"><div class="svc-top-bar"></div><div class="svc-num">04 — Prevenzione</div><div class="svc-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#F4A442" stroke-width="1.7"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Misurazione Parametri Vitali</h3><p>Prima di ogni intervento, ogni nostro operatore esegue gratuitamente la misurazione dei principali parametri vitali del paziente, garantendo una valutazione clinica preliminare accurata, responsabile e pienamente inclusa nel servizio.</p><ul class="svc-list"><li>Pressione arteriosa con sfigmomanometro digitale certificato</li><li>Saturazione di ossigeno nel sangue (SpO₂) con pulsossimetro</li><li>Frequenza cardiaca e monitoraggio del ritmo</li><li>Segnalazione tempestiva di anomalie al medico curante</li><li>Completamente gratuito ad ogni visita</li></ul></div>
   </div>
 </section>
 
@@ -432,7 +420,7 @@ section{padding:88px 5%;}
   <div class="reveal"><p class="sec-eyebrow">La Nostra Filosofia</p><h2 class="sec-title">Umanità, Competenza<br/><em>e Dedizione Assoluta</em></h2><div class="sec-rule"></div></div>
   <div class="manifesto-grid">
     <div class="reveal-l"><div class="manifesto-text">
-      <p>Nata dalla visione della Fondatrice <strong>Lisis Zuniga</strong>, <strong>CareS</strong> incarna il principio che ogni essere umano merita un'assistenza sanitaria <strong>straordinaria, tempestiva e profondamente personalizzata</strong>.</p>
+              <p>Nata dalla visione della Fondatrice <strong>Lisis Zuniga</strong>, <strong>Dedicare Solutions</strong> incarna il principio che ogni essere umano merita un'assistenza sanitaria <strong>straordinaria, tempestiva e profondamente personalizzata</strong>.</p>
       <p>Il nostro approccio <strong>olistico e multidisciplinare</strong> ci consente di prendere in carico il paziente nella sua totalità: dalla sfera clinica a quella emotiva, dal domicilio alla struttura ospedaliera, fino al delicato momento del trasporto.</p>
       <p>Prima di qualsiasi intervento, ogni nostro operatore esegue <strong>gratuitamente</strong> il monitoraggio dei parametri vitali fondamentali, garantendo una valutazione preliminare accurata e responsabile.</p>
       <a href="#contatti" class="btn-coral" style="margin-top:12px;">Inizia il percorso di cura</a>
@@ -489,11 +477,11 @@ section{padding:88px 5%;}
 
 <div class="quote">
   <blockquote class="reveal">"Dobbiamo imparare ad aiutare coloro che lo meritano, non solo quelli che hanno bisogno. La vita risponde al merito, non al bisogno."</blockquote>
-  <cite class="reveal d1">— Jim Rohn · Citazione fondante di CareS</cite>
+      <cite class="reveal d1">— Jim Rohn · Citazione fondante di Dedicare Solutions</cite>
 </div>
 
 <section class="why">
-  <div class="reveal"><p class="sec-eyebrow">Perché Sceglierci</p><h2 class="sec-title">Il Vantaggio<br/><em>CareS</em></h2><div class="sec-rule"></div></div>
+  <div class="reveal"><p class="sec-eyebrow">Perché Sceglierci</p>        <h2 class="sec-title">Il Vantaggio<br/><em>Dedicare Solutions</em></h2><div class="sec-rule"></div></div>
   <div class="why-grid">
     <div class="why-item reveal d1"><div class="check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><h4>Consulenza Iniziale Gratuita</h4><p>Prima di qualsiasi impegno, offriamo una consulenza senza costi per comprendere le reali esigenze del paziente.</p></div>
     <div class="why-item reveal d2"><div class="check"><svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M2 7l3 3 7-7" stroke="white" stroke-width="2" stroke-linecap="round"/></svg></div><h4>Personale Certificato</h4><p>Ogni professionista supera un rigoroso processo di selezione che valuta competenze tecniche, umane e deontologiche.</p></div>
@@ -511,7 +499,7 @@ section{padding:88px 5%;}
     <div>
       <div class="team-name">Lisis Zuniga</div>
       <div class="team-role">Fondatrice & Direttrice Sanitaria</div>
-      <p class="team-bio">Visionaria e professionista sanitaria di comprovata esperienza internazionale, Lisis ha fondato <strong>CareS</strong> con la ferma convinzione che l'eccellenza clinica debba essere accessibile a chiunque ne abbia necessità. La sua leadership trasparente e la sua profonda umanità ispirano ogni giorno l'intero team verso standard assistenziali superiori. Il suo approccio olistico alla cura del paziente è il fulcro identitario dell'intera organizzazione.</p>
+      <p class="team-bio">Visionaria e professionista sanitaria di comprovata esperienza internazionale, Lisis ha fondato <strong>Dedicare Solutions</strong> con la ferma convinzione che l'eccellenza clinica debba essere accessibile a chiunque ne abbia necessità. La sua leadership trasparente e la sua profonda umanità ispirano ogni giorno l'intero team verso standard assistenziali superiori. Il suo approccio olistico alla cura del paziente è il fulcro identitario dell'intera organizzazione.</p>
     </div>
   </div>
 </section>
@@ -523,7 +511,7 @@ section{padding:88px 5%;}
       <div class="cinfo reveal d1"><div class="cinfo-ic"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><div><div class="cinfo-label">Sede Operativa</div><div class="cinfo-val">Via Roma 80, Segrate (MI)</div></div></div>
       <div class="cinfo reveal d2"><div class="cinfo-ic"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div><div class="cinfo-label">Telefono</div><div class="cinfo-val">+39 328 773 0194</div></div></div>
       <div class="cinfo reveal d3"><div class="cinfo-ic"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div><div class="cinfo-label">Email</div><div class="cinfo-val">info@dedicaresolutions.it</div></div></div>
-      <div class="cinfo reveal d4"><div class="cinfo-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-width="2"/></svg></div><div><div class="cinfo-label">WhatsApp</div><div class="cinfo-val">Risposta Immediata 24/7</div></div></div>
+      <div class="cinfo reveal d4"><div class="cinfo-ic"><svg viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18" stroke-linecap="round" stroke-width="2"/></svg></div><div><div class="cinfo-label">WhatsApp</div><div class="cinfo-val">Disponibilità 24/7</div></div></div>
     </div>
     <div class="cta-box reveal d2">
       <h3>Richiedi una Consulenza</h3>
@@ -552,8 +540,8 @@ section{padding:88px 5%;}
         </svg>
       </div>
       <div>
-        <div style="font-family:Georgia,serif;font-size:26px;color:#fff;line-height:1;">Care<span style="color:#15A89A;font-style:italic;">S</span></div>
-        <div style="font-size:11px;color:#8B96A5;letter-spacing:.08em;margin-top:2px;">DediCare Solutions S.R.L.S.</div>
+        <div style="font-family:Georgia,serif;font-size:26px;color:#fff;line-height:1;">Dedicare <span style="color:#15A89A;font-style:italic;">Solutions</span></div>
+        <div style="font-size:11px;color:#8B96A5;letter-spacing:.08em;margin-top:2px;">Assistenza Sanitaria Personalizzata</div>
       </div>
     </div>
     <div style="font-family:Georgia,serif;font-size:18px;color:#B8C4D2;font-style:italic;max-width:480px;text-align:right;line-height:1.4;">
@@ -563,9 +551,9 @@ section{padding:88px 5%;}
 
   <div class="footer-main" style="padding:48px 5%;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;border-bottom:1px solid #252d3d;">
     <div>
-      <p style="font-size:13px;color:#8B96A5;line-height:1.8;margin-bottom:20px;max-width:320px;">CareS affianca anziani, adulti, bambini e disabili nel percorso di cura domiciliare, ospedaliero e durante ogni spostamento. Disponibili 24 ore su 24, 7 giorni su 7.</p>
+      <p style="font-size:13px;color:#8B96A5;line-height:1.8;margin-bottom:20px;max-width:320px;">Dedicare Solutions affianca anziani, adulti, bambini e disabili nel percorso di cura domiciliare, ospedaliero e durante ogni spostamento. Disponibili 24 ore su 24, 7 giorni su 7.</p>
       <div style="font-size:12px;color:#5A6778;line-height:1.8;">
-        DediCare Solutions S.R.L.S. — Socio Unico<br/>
+        Dedicare Solutions S.R.L.S. — Socio Unico<br/>
         Via Roma 80 – 20054 Segrate (MI)<br/>
         Tel. <a href="tel:+393287730194" style="color:#5A6778;text-decoration:none;">+39 328 773 0194</a><br/>
         <a href="mailto:info@dedicaresolutions.it" style="color:#5A6778;text-decoration:none;">info@dedicaresolutions.it</a><br/>
@@ -577,8 +565,8 @@ section{padding:88px 5%;}
     <div>
       <h5 style="font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#fff;margin-bottom:20px;font-weight:600;padding-bottom:12px;border-bottom:2px solid #0B5FA5;display:inline-block;">Informazioni Legali</h5>
       <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:11px;">
-        <li><a href="#" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Privacy Policy</a></li>
-        <li><a href="#" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Cookie Policy</a></li>
+        <li><a href="privacy-policy.html" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Privacy Policy</a></li>
+        <li><a href="cookie-policy.html" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Cookie Policy</a></li>
         <li><a href="#" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Trasparenza</a></li>
         <li><a href="#" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Note Legali</a></li>
         <li><a href="#" style="font-size:13px;color:#8B96A5;text-decoration:none;" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#8B96A5'">Impostazioni Cookie</a></li>
@@ -608,7 +596,7 @@ section{padding:88px 5%;}
   </div>
 
   <div class="copyright-bottom" style="padding:20px 5%;text-align:center;">
-    <div style="font-size:11px;color:#3D4B5C;">Copyright Reserved ©. 2026, CareS · DediCare Solutions S.R.L.S. — Tutti i diritti riservati.</div>
+    <div style="font-size:11px;color:#3D4B5C;">Copyright Reserved ©. 2026, Dedicare Solutions — Tutti i diritti riservati.</div>
   </div>
 </footer>
 
