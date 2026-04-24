@@ -16,118 +16,118 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Georgia',serif;background:var(--white);color:var(--black);line-height:1.7;overflow-x:hidden;}
-
-.topbar{background:var(--blue-dark);padding:9px 5%;display:flex;align-items:center;justify-content:space-between;}
-.topbar-left{font-family:sans-serif;font-size:12px;color:#B8D4EB;letter-spacing:.04em;}
-.topbar-right{display:flex;gap:22px;}
-.topbar-right a{font-family:sans-serif;font-size:12px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:6px;}
-.topbar-right a:hover{color:var(--amber);}
-
-nav{background:var(--white);border-bottom:1px solid var(--border-light);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:74px;box-shadow:0 2px 12px rgba(11,95,165,.06);}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-circle{width:46px;height:46px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;border:2px solid var(--blue);}
-.nav-brand{font-size:22px;color:var(--black);letter-spacing:.02em;}
+nav{background:var(--white);border-bottom:1px solid var(--border-light);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:0 2px 12px rgba(11,95,165,.06);position:sticky;top:0;z-index:100;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-circle{width:40px;height:40px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;border:2px solid var(--blue);flex-shrink:0;}
+.nav-brand{font-size:19px;color:var(--black);}
 .nav-brand b{color:var(--blue);font-weight:400;font-style:italic;}
-.nav-back{font-family:sans-serif;font-size:13px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:8px;font-weight:500;border:1.5px solid var(--blue);padding:8px 18px;border-radius:3px;transition:all .2s;}
+.nav-back{font-family:sans-serif;font-size:12px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:7px;font-weight:500;border:1.5px solid var(--blue);padding:8px 14px;border-radius:3px;transition:all .2s;min-height:40px;white-space:nowrap;}
 .nav-back:hover{background:var(--blue);color:#fff;}
-
-.breadcrumb{background:var(--blue-soft);padding:14px 5%;border-bottom:1px solid var(--border-light);}
-.breadcrumb-inner{font-family:sans-serif;font-size:13px;color:var(--gray);display:flex;align-items:center;gap:8px;}
+.breadcrumb{background:var(--blue-soft);padding:10px 5%;border-bottom:1px solid var(--border-light);}
+.breadcrumb-inner{font-family:sans-serif;font-size:12px;color:var(--gray);display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
 .breadcrumb-inner a{color:var(--blue);text-decoration:none;}
-.breadcrumb-inner a:hover{text-decoration:underline;}
-
-.page-hero{background:linear-gradient(135deg,var(--blue-soft) 0%,var(--cream) 100%);padding:56px 5% 48px;border-bottom:1px solid var(--border-light);}
-.page-tag{font-family:sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;font-weight:600;}
-.page-title{font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--black);margin-bottom:16px;line-height:1.15;}
-.page-meta{font-family:sans-serif;font-size:13px;color:var(--gray);display:flex;gap:24px;flex-wrap:wrap;}
-.page-meta span{display:flex;align-items:center;gap:6px;}
-
-.content-wrap{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:56px 5%;max-width:1200px;margin:0 auto;}
-
-.sidebar{position:sticky;top:24px;align-self:start;}
-.sidebar-title{font-family:sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;font-weight:600;}
+.page-hero{background:linear-gradient(135deg,var(--blue-soft) 0%,var(--cream) 100%);padding:44px 5% 36px;border-bottom:1px solid var(--border-light);}
+.page-tag{font-family:sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;font-weight:600;}
+.page-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:400;color:var(--black);margin-bottom:12px;line-height:1.15;}
+.page-meta{font-family:sans-serif;font-size:12px;color:var(--gray);display:flex;gap:16px;flex-wrap:wrap;}
+.page-meta span{display:flex;align-items:center;gap:5px;}
+.content-wrap{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:44px 5%;max-width:1100px;margin:0 auto;}
+.sidebar{position:sticky;top:80px;align-self:start;}
+.sidebar-title{font-family:sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;font-weight:600;}
 .sidebar-nav{list-style:none;display:flex;flex-direction:column;gap:2px;}
-.sidebar-nav a{font-family:sans-serif;font-size:13px;color:var(--gray);text-decoration:none;padding:9px 14px;border-radius:4px;display:block;border-left:2px solid transparent;transition:all .2s;}
+.sidebar-nav a{font-family:sans-serif;font-size:12px;color:var(--gray);text-decoration:none;padding:8px 12px;border-radius:4px;display:flex;align-items:center;border-left:2px solid transparent;transition:all .2s;min-height:40px;}
 .sidebar-nav a:hover{color:var(--blue);background:var(--blue-soft);border-color:var(--blue);}
-
 article{min-width:0;}
-.section-block{margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--border-light);}
+.section-block{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--border-light);}
 .section-block:last-child{border-bottom:none;}
-.section-num{font-family:sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;font-weight:600;}
-.section-heading{font-size:1.5rem;font-weight:400;color:var(--black);margin-bottom:20px;line-height:1.25;}
+.section-num{font-family:sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;font-weight:600;}
+.section-heading{font-size:1.35rem;font-weight:400;color:var(--black);margin-bottom:16px;line-height:1.25;}
 .section-heading em{font-style:italic;color:var(--blue);}
-p{font-family:sans-serif;font-size:15px;color:var(--gray);line-height:1.85;margin-bottom:16px;}
+p{font-family:sans-serif;font-size:14px;color:var(--gray);line-height:1.85;margin-bottom:14px;}
 p:last-child{margin-bottom:0;}
 strong{color:var(--black);font-weight:600;}
-ul.check-list{list-style:none;padding:0;margin-top:12px;display:flex;flex-direction:column;gap:10px;}
-ul.check-list li{font-family:sans-serif;font-size:14px;color:var(--gray);padding-left:24px;position:relative;line-height:1.7;}
-ul.check-list li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:13px;}
-
-.info-box{background:var(--blue-soft);border:1px solid var(--blue-light);border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:20px 0;}
-.info-box p{font-size:14px;color:var(--black);margin:0;}
-
-.warning-box{background:var(--amber-light);border:1px solid #F4C06A;border-left:4px solid var(--amber);padding:20px 24px;border-radius:0 8px 8px 0;margin:20px 0;}
-.warning-box p{font-size:14px;color:#7A5A10;margin:0;}
-
-/* COOKIE TABLE */
-.cookie-table-wrap{overflow-x:auto;margin-top:20px;}
-table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:13px;}
-th{background:var(--blue);color:#fff;padding:12px 16px;text-align:left;font-weight:600;letter-spacing:.04em;}
-td{padding:12px 16px;border-bottom:1px solid var(--border-light);color:var(--gray);vertical-align:top;line-height:1.6;}
+ul.check-list{list-style:none;padding:0;margin-top:10px;display:flex;flex-direction:column;gap:9px;}
+ul.check-list li{font-family:sans-serif;font-size:13px;color:var(--gray);padding-left:22px;position:relative;line-height:1.7;}
+ul.check-list li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:12px;}
+.info-box{background:var(--blue-soft);border:1px solid var(--blue-light);border-left:4px solid var(--blue);padding:16px 20px;border-radius:0 8px 8px 0;margin:18px 0;}
+.info-box p{font-size:13px;color:var(--black);margin:0;}
+.warning-box{background:var(--amber-light);border:1px solid #F4C06A;border-left:4px solid var(--amber);padding:16px 20px;border-radius:0 8px 8px 0;margin:18px 0;}
+.warning-box p{font-size:13px;color:#7A5A10;margin:0;}
+.cookie-table-wrap{overflow-x:auto;margin-top:16px;-webkit-overflow-scrolling:touch;border-radius:8px;border:1px solid var(--border-light);}
+table{width:100%;border-collapse:collapse;font-family:sans-serif;font-size:12px;min-width:480px;}
+th{background:var(--blue);color:#fff;padding:10px 14px;text-align:left;font-weight:600;letter-spacing:.04em;}
+td{padding:10px 14px;border-bottom:1px solid var(--border-light);color:var(--gray);vertical-align:top;line-height:1.6;}
+tr:last-child td{border-bottom:none;}
 tr:hover td{background:var(--off-white);}
-.badge{display:inline-block;padding:3px 10px;border-radius:12px;font-size:11px;font-weight:600;letter-spacing:.06em;}
+.badge{display:inline-block;padding:2px 9px;border-radius:10px;font-size:10px;font-weight:600;letter-spacing:.06em;}
 .badge-tech{background:var(--teal-light);color:var(--teal);}
 .badge-anal{background:var(--blue-light);color:var(--blue);}
 .badge-sess{background:#F0F0F0;color:#555;}
 .badge-pers{background:var(--amber-light);color:#C97D10;}
-
-/* BROWSER LINKS */
-.browser-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:20px;}
-.browser-card{background:var(--off-white);border:1px solid var(--border-light);padding:16px 20px;border-radius:8px;display:flex;align-items:center;gap:14px;text-decoration:none;transition:all .2s;}
+.browser-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:16px;}
+.browser-card{background:var(--off-white);border:1px solid var(--border-light);padding:14px 16px;border-radius:8px;display:flex;align-items:center;gap:12px;text-decoration:none;transition:all .2s;min-height:56px;}
 .browser-card:hover{background:var(--blue-soft);border-color:var(--blue-light);transform:translateY(-2px);}
-.browser-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:20px;}
-.browser-name{font-family:sans-serif;font-size:13px;font-weight:600;color:var(--black);}
-.browser-desc{font-family:sans-serif;font-size:11px;color:var(--gray);}
-
-.contact-card{background:var(--white);border:1px solid var(--border-light);border-radius:12px;padding:28px 24px;margin-top:20px;box-shadow:0 4px 16px rgba(11,95,165,.06);}
-.contact-card h4{font-size:15px;font-weight:400;margin-bottom:16px;color:var(--black);}
-.contact-row{display:flex;gap:12px;align-items:center;margin-bottom:10px;font-family:sans-serif;font-size:13px;color:var(--gray);}
+.browser-icon{width:36px;height:36px;border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;}
+.browser-name{font-family:sans-serif;font-size:12px;font-weight:600;color:var(--black);}
+.browser-desc{font-family:sans-serif;font-size:10px;color:var(--gray);}
+.contact-card{background:var(--white);border:1px solid var(--border-light);border-radius:10px;padding:22px 20px;margin-top:16px;box-shadow:0 4px 14px rgba(11,95,165,.06);}
+.contact-card h4{font-size:14px;font-weight:400;margin-bottom:14px;color:var(--black);}
+.contact-row{display:flex;gap:10px;align-items:center;margin-bottom:9px;font-family:sans-serif;font-size:12px;color:var(--gray);min-height:40px;}
 .contact-row a{color:var(--blue);text-decoration:none;}
 .contact-icon{width:32px;height:32px;background:var(--blue-light);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .contact-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.7;}
-
-.update-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-soft);border:1px solid var(--blue-light);padding:6px 14px;border-radius:20px;font-family:sans-serif;font-size:12px;color:var(--blue);font-weight:600;margin-top:24px;}
-
-footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:80px;}
-.footer-brand{display:flex;align-items:center;gap:12px;}
-.footer-brand-text{font-family:Georgia,serif;font-size:18px;color:#fff;}
+.update-badge{display:inline-flex;align-items:center;gap:7px;background:var(--blue-soft);border:1px solid var(--blue-light);padding:7px 14px;border-radius:20px;font-family:sans-serif;font-size:11px;color:var(--blue);font-weight:600;margin-top:20px;flex-wrap:wrap;}
+footer{background:#1A2332;font-family:sans-serif;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:60px;}
+.footer-brand{display:flex;align-items:center;gap:10px;}
+.footer-brand-text{font-family:Georgia,serif;font-size:17px;color:#fff;}
 .footer-brand-text b{color:var(--teal);font-weight:400;font-style:italic;}
-.footer-links{display:flex;gap:20px;}
-.footer-links a{font-family:sans-serif;font-size:12px;color:#8B96A5;text-decoration:none;transition:color .2s;}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap;}
+.footer-links a{font-family:sans-serif;font-size:11px;color:#8B96A5;text-decoration:none;transition:color .2s;min-height:40px;display:flex;align-items:center;}
 .footer-links a:hover{color:#fff;}
-.footer-copy{font-family:sans-serif;font-size:11px;color:#3D4B5C;width:100%;text-align:center;padding-top:16px;border-top:1px solid #252d3d;margin-top:8px;}
-
+.footer-copy{font-family:sans-serif;font-size:10px;color:#3D4B5C;width:100%;text-align:center;padding-top:14px;border-top:1px solid #252d3d;margin-top:6px;}
+@media(max-width:1024px){.content-wrap{grid-template-columns:180px 1fr;gap:28px;padding:32px 5%;}}
 @media(max-width:768px){
-  .content-wrap{grid-template-columns:1fr;gap:32px;padding:32px 5%;}
-  .sidebar{position:static;}
-  .topbar{flex-direction:column;gap:4px;text-align:center;}
-  .page-hero{padding:36px 5% 32px;}
+  nav{height:auto;min-height:58px;padding:10px 5%;}
+  .nav-brand{font-size:16px;}
+  .logo-circle{width:36px;height:36px;}
+  .nav-back{font-size:11px;padding:7px 10px;}
+  .breadcrumb{padding:8px 5%;}
+  .page-hero{padding:26px 5% 22px;}
+  .page-title{font-size:1.6rem;}
+  .page-meta{gap:10px;font-size:11px;}
+  .content-wrap{grid-template-columns:1fr;gap:0;padding:0;}
+  .sidebar{position:static;background:var(--blue-soft);padding:16px 5%;border-bottom:1px solid var(--border-light);}
+  .sidebar-nav{flex-direction:row;flex-wrap:wrap;gap:6px;}
+  .sidebar-nav a{padding:5px 11px;border-left:none;border:1px solid var(--border-light);border-radius:20px;background:#fff;font-size:11px;min-height:32px;}
+  .sidebar-nav a:hover{border-color:var(--blue);}
+  article{padding:24px 5%;}
+  .section-block{margin-bottom:28px;padding-bottom:28px;}
+  .section-heading{font-size:1.15rem;}
+  p{font-size:13px;}
   .browser-grid{grid-template-columns:1fr;}
-  footer{flex-direction:column;text-align:center;}
-  .footer-links{flex-wrap:wrap;justify-content:center;}
+  .contact-card{padding:16px 14px;}
+  footer{flex-direction:column;text-align:center;padding:20px 5%;}
+  .footer-links{justify-content:center;}
+  .footer-brand{justify-content:center;}
+}
+@media(max-width:480px){
+  nav{padding:8px 4%;}
+  .nav-brand{font-size:14px;}
+  .logo-circle{width:32px;height:32px;}
+  .nav-back{font-size:10px;padding:6px 8px;}
+  .page-hero{padding:20px 4% 18px;}
+  .page-title{font-size:1.4rem;}
+  article{padding:20px 4%;}
+  .section-heading{font-size:1.05rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-
-
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
     <div class="logo-circle">
-      <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+      <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
         <path d="M55 18 C45 18 38 25 38 35 C38 40 40 44 42 47 L42 55 L30 55 C24 55 20 59 20 65 L20 80 L70 80 L70 35 C70 25 63 18 55 18 Z" fill="white"/>
         <path d="M38 55 C33 55 28 60 28 66 C28 72 32 76 36 78 C40 76 43 72 43 66 C43 60 42 55 38 55 Z" fill="#111"/>
         <circle cx="55" cy="30" r="7" fill="#111"/>
@@ -136,12 +136,11 @@ footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;al
     <span class="nav-brand">Dedicare <b>Solutions</b></span>
   </a>
   <a href="index.html" class="nav-back">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
     Torna alla Home
   </a>
 </nav>
 
-<!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Dedicare Solutions Home</a>
@@ -152,90 +151,71 @@ footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;al
   </div>
 </div>
 
-<!-- PAGE HERO -->
 <div class="page-hero">
   <p class="page-tag">Informazioni Legali</p>
   <h1 class="page-title">Cookie Policy</h1>
   <div class="page-meta">
-    <span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-      In vigore dal 22 Aprile 2026
-    </span>
-    <span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Conforme al GDPR UE 2016/679
-    </span>
-    <span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
-      Parte integrante della Privacy Policy
-    </span>
+    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>In vigore dal 22 Aprile 2026</span>
+    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Conforme al GDPR UE 2016/679</span>
+    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>Parte integrante della Privacy Policy</span>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="content-wrap">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-title">Indice</div>
     <ul class="sidebar-nav">
       <li><a href="#premessa">1. Premessa</a></li>
-      <li><a href="#cosa-sono">2. Cosa sono i Cookie</a></li>
-      <li><a href="#tipologie">3. Tipologie di Cookie</a></li>
-      <li><a href="#elenco">4. Elenco dei Cookie Utilizzati</a></li>
-      <li><a href="#impostazioni">5. Impostazioni Cookie</a></li>
-      <li><a href="#consenso">6. Raccolta del Consenso</a></li>
-      <li><a href="#trasferimento">7. Trasferimento dei Dati</a></li>
-      <li><a href="#destinatari">8. Categorie di Destinatari</a></li>
-      <li><a href="#diritti">9. Diritti dell'Interessato</a></li>
+      <li><a href="#cosa-sono">2. Cosa sono</a></li>
+      <li><a href="#tipologie">3. Tipologie</a></li>
+      <li><a href="#elenco">4. Elenco Cookie</a></li>
+      <li><a href="#impostazioni">5. Impostazioni</a></li>
+      <li><a href="#consenso">6. Consenso</a></li>
+      <li><a href="#trasferimento">7. Trasferimento</a></li>
+      <li><a href="#destinatari">8. Destinatari</a></li>
+      <li><a href="#diritti">9. Diritti</a></li>
     </ul>
   </aside>
 
-  <!-- ARTICLE -->
   <article>
-
     <div class="section-block" id="premessa">
       <div class="section-num">Articolo 01</div>
       <h2 class="section-heading"><em>Premessa</em></h2>
-      <p>La presente Cookie Policy è riferita esclusivamente al sito <strong>dedicaresolutions.it</strong> (di seguito, "<strong>Sito</strong>") e deve essere intesa come parte integrante della <a href="privacy-policy.html" style="color:var(--blue);">Privacy Policy</a> del medesimo.</p>
+      <p>La presente Cookie Policy è riferita esclusivamente al sito <strong>dedicaresolutions.it</strong> e deve essere intesa come parte integrante della <a href="privacy-policy.html" style="color:var(--blue);">Privacy Policy</a> del medesimo.</p>
       <p>Il titolare del trattamento dei dati personali è <strong>Dedicare Solutions S.R.L.S.</strong>, con sede legale in Via Roma 80 – 20054 Segrate (MI), P.IVA IT11600760968.</p>
       <div class="info-box">
-        <p>Dedicare Solutions S.R.L.S. tratta i dati personali nel rispetto dei principi di <strong>liceità, correttezza, trasparenza, limitazione delle finalità e della conservazione, minimizzazione dei dati, esattezza, integrità e riservatezza</strong>, in conformità al Regolamento UE 2016/679 (GDPR).</p>
+        <p>Dedicare Solutions S.R.L.S. tratta i dati personali nel rispetto dei principi di <strong>liceità, correttezza, trasparenza, limitazione delle finalità, minimizzazione dei dati, esattezza, integrità e riservatezza</strong>, in conformità al Regolamento UE 2016/679 (GDPR).</p>
       </div>
     </div>
 
     <div class="section-block" id="cosa-sono">
       <div class="section-num">Articolo 02</div>
       <h2 class="section-heading">Cosa sono <em>i Cookie</em></h2>
-      <p>I cookie sono piccoli file di testo che i siti visitati dall'utente inviano e registrano sul suo computer o dispositivo mobile, per essere poi ritrasmessi agli stessi siti alla visita successiva. Grazie ai cookie un sito ricorda le azioni e preferenze dell'utente (ad esempio, lingua prescelta, dimensioni dei caratteri, altre impostazioni di visualizzazione), in modo che le stesse non debbano essere indicate nuovamente quando l'utente torni a visitare detto sito o navighi da una pagina all'altra.</p>
-      <p>I cookie sono usati per eseguire autenticazioni informatiche, monitoraggio di sessioni e memorizzazione di informazioni riguardanti le attività degli utenti che accedono a un sito. Possono contenere un codice identificativo unico che consente di tenere traccia della navigazione dell'utente all'interno del sito per finalità statistiche o di funzionamento.</p>
-      <p>Nel corso della navigazione su un sito, l'utente può ricevere:</p>
+      <p>I cookie sono piccoli file di testo che i siti visitati dall'utente inviano e registrano sul suo computer o dispositivo mobile. Grazie ai cookie un sito ricorda le azioni e preferenze dell'utente in modo da non doverle indicare nuovamente ad ogni visita.</p>
+      <p>Nel corso della navigazione, l'utente può ricevere:</p>
       <ul class="check-list">
         <li><strong>Cookie di prima parte</strong> — installati direttamente dal gestore del sito (Dedicare Solutions S.R.L.S.)</li>
-        <li><strong>Cookie di terze parti</strong> — installati sul dispositivo da soggetti diversi dal gestore del sito (es. servizi di analisi, mappe, strumenti di accessibilità)</li>
+        <li><strong>Cookie di terze parti</strong> — installati da soggetti diversi dal gestore del sito</li>
       </ul>
-      <p style="margin-top:16px;">In base alla loro durata si distinguono in:</p>
+      <p style="margin-top:14px;">In base alla durata si distinguono in:</p>
       <ul class="check-list">
         <li><strong>Cookie di sessione</strong> — cancellati automaticamente alla chiusura del browser</li>
-        <li><strong>Cookie persistenti</strong> — permangono sull'apparecchiatura dell'utente fino a una scadenza prestabilita</li>
+        <li><strong>Cookie persistenti</strong> — permangono sull'apparecchiatura fino a una scadenza prestabilita</li>
       </ul>
     </div>
 
     <div class="section-block" id="tipologie">
       <div class="section-num">Articolo 03</div>
       <h2 class="section-heading">Tipologie di <em>Cookie</em></h2>
-
-      <p><strong>Cookie Tecnici</strong> — Non richiedono il consenso dell'utente. Sono indispensabili per il corretto funzionamento del Sito e per erogare i servizi richiesti dall'utente. Comprendono:</p>
+      <p><strong>Cookie Tecnici</strong> — Non richiedono il consenso. Sono indispensabili per il corretto funzionamento del Sito:</p>
       <ul class="check-list">
         <li>Cookie di navigazione o di sessione, necessari per la fruizione del Sito</li>
-        <li>Cookie analytics di prima parte, utilizzati per raccogliere informazioni aggregate sul numero di visitatori e sulle pagine visitate</li>
+        <li>Cookie analytics di prima parte, per raccogliere informazioni aggregate</li>
         <li>Cookie analytics di terza parte anonimizzati, che non consentono l'identificazione del singolo utente</li>
       </ul>
-
-      <p style="margin-top:20px;"><strong>Cookie di Profilazione</strong> — Richiedono il consenso preventivo dell'utente. Sono volti a creare profili relativi all'utente e a inviare messaggi in linea con le preferenze manifestate durante la navigazione. Il Sito di Dedicare Solutions <strong>non utilizza cookie di profilazione</strong> e non effettua attività pubblicitarie tramite cookie.</p>
-
+      <p style="margin-top:16px;"><strong>Cookie di Profilazione</strong> — Il Sito di Dedicare Solutions <strong>non utilizza cookie di profilazione</strong> e non effettua attività pubblicitarie tramite cookie.</p>
       <div class="warning-box">
-        <p>⚠️ <strong>Nota importante:</strong> il mancato utilizzo di alcuni cookie tecnici potrebbe rendere impossibile la corretta fruizione del Sito o di alcune sue funzionalità.</p>
+        <p>⚠️ <strong>Nota importante:</strong> il mancato utilizzo di alcuni cookie tecnici potrebbe rendere impossibile la corretta fruizione del Sito.</p>
       </div>
     </div>
 
@@ -246,89 +226,40 @@ footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;al
       <div class="cookie-table-wrap">
         <table>
           <thead>
-            <tr>
-              <th>Nome</th>
-              <th>Tipo</th>
-              <th>Durata</th>
-              <th>Finalità</th>
-              <th>Prima/Terza Parte</th>
-            </tr>
+            <tr><th>Nome</th><th>Tipo</th><th>Durata</th><th>Finalità</th><th>Parte</th></tr>
           </thead>
           <tbody>
-            <tr>
-              <td><strong>session_id</strong></td>
-              <td><span class="badge badge-tech">Tecnico</span></td>
-              <td><span class="badge badge-sess">Sessione</span></td>
-              <td>Gestione della sessione di navigazione e mantenimento dello stato della pagina</td>
-              <td>Prima parte</td>
-            </tr>
-            <tr>
-              <td><strong>cookie_consent</strong></td>
-              <td><span class="badge badge-tech">Tecnico</span></td>
-              <td><span class="badge badge-pers">12 mesi</span></td>
-              <td>Memorizzazione delle preferenze espresse dall'utente in merito all'utilizzo dei cookie</td>
-              <td>Prima parte</td>
-            </tr>
-            <tr>
-              <td><strong>_ga</strong></td>
-              <td><span class="badge badge-anal">Analitico</span></td>
-              <td><span class="badge badge-pers">24 mesi</span></td>
-              <td>Google Analytics — distingue gli utenti unici. Dati anonimizzati senza IP completo</td>
-              <td>Terza parte (Google)</td>
-            </tr>
-            <tr>
-              <td><strong>_ga_*</strong></td>
-              <td><span class="badge badge-anal">Analitico</span></td>
-              <td><span class="badge badge-pers">24 mesi</span></td>
-              <td>Google Analytics — mantiene lo stato della sessione di analisi. Dati aggregati e anonimizzati</td>
-              <td>Terza parte (Google)</td>
-            </tr>
-            <tr>
-              <td><strong>_gid</strong></td>
-              <td><span class="badge badge-anal">Analitico</span></td>
-              <td><span class="badge badge-sess">24 ore</span></td>
-              <td>Google Analytics — distingue gli utenti nelle sessioni giornaliere</td>
-              <td>Terza parte (Google)</td>
-            </tr>
+            <tr><td><strong>session_id</strong></td><td><span class="badge badge-tech">Tecnico</span></td><td><span class="badge badge-sess">Sessione</span></td><td>Gestione della sessione di navigazione</td><td>Prima</td></tr>
+            <tr><td><strong>cookie_consent</strong></td><td><span class="badge badge-tech">Tecnico</span></td><td><span class="badge badge-pers">12 mesi</span></td><td>Memorizzazione preferenze cookie</td><td>Prima</td></tr>
+            <tr><td><strong>_ga</strong></td><td><span class="badge badge-anal">Analitico</span></td><td><span class="badge badge-pers">24 mesi</span></td><td>Google Analytics — utenti unici, dati anonimizzati</td><td>Terza (Google)</td></tr>
+            <tr><td><strong>_ga_*</strong></td><td><span class="badge badge-anal">Analitico</span></td><td><span class="badge badge-pers">24 mesi</span></td><td>Google Analytics — stato sessione, dati aggregati</td><td>Terza (Google)</td></tr>
+            <tr><td><strong>_gid</strong></td><td><span class="badge badge-anal">Analitico</span></td><td><span class="badge badge-sess">24 ore</span></td><td>Google Analytics — sessioni giornaliere</td><td>Terza (Google)</td></tr>
           </tbody>
         </table>
       </div>
-      <p style="margin-top:16px;font-size:13px;color:var(--gray-light);font-style:italic;">L'elenco sarà aggiornato in caso di modifiche ai cookie utilizzati. Ultimo aggiornamento: Aprile 2026.</p>
+      <p style="margin-top:14px;font-size:12px;color:var(--gray-light);font-style:italic;">Ultimo aggiornamento: Aprile 2026.</p>
     </div>
 
     <div class="section-block" id="impostazioni">
       <div class="section-num">Articolo 05</div>
       <h2 class="section-heading">Impostazioni <em>Cookie</em></h2>
-      <p>L'utente può bloccare o cancellare (in tutto o in parte) i cookie tecnici e di funzionalità attraverso le specifiche funzioni del proprio browser. Si ricorda tuttavia che non autorizzare i cookie tecnici potrebbe comportare l'impossibilità di utilizzare il Sito, visionarne i contenuti e usufruire dei relativi servizi.</p>
-      <p>Per gestire le preferenze sui cookie attraverso il browser, è possibile consultare le istruzioni specifiche:</p>
+      <p>L'utente può bloccare o cancellare i cookie attraverso le specifiche funzioni del proprio browser. Si ricorda che non autorizzare i cookie tecnici potrebbe comportare l'impossibilità di utilizzare il Sito.</p>
       <div class="browser-grid">
         <a href="https://support.microsoft.com/it-it/help/4027947" target="_blank" rel="noopener" class="browser-card">
           <div class="browser-icon" style="background:#E8F1FB;">🌐</div>
-          <div>
-            <div class="browser-name">Microsoft Edge</div>
-            <div class="browser-desc">Gestione cookie Edge</div>
-          </div>
+          <div><div class="browser-name">Microsoft Edge</div><div class="browser-desc">Gestione cookie Edge</div></div>
         </a>
         <a href="https://support.google.com/chrome/answer/95647?hl=it" target="_blank" rel="noopener" class="browser-card">
           <div class="browser-icon" style="background:#FEF3E2;">🌐</div>
-          <div>
-            <div class="browser-name">Google Chrome</div>
-            <div class="browser-desc">Gestione cookie Chrome</div>
-          </div>
+          <div><div class="browser-name">Google Chrome</div><div class="browser-desc">Gestione cookie Chrome</div></div>
         </a>
         <a href="https://support.apple.com/it-it/guide/safari/sfri11471/mac" target="_blank" rel="noopener" class="browser-card">
           <div class="browser-icon" style="background:#E1F5F3;">🌐</div>
-          <div>
-            <div class="browser-name">Safari</div>
-            <div class="browser-desc">Gestione cookie Safari</div>
-          </div>
+          <div><div class="browser-name">Safari</div><div class="browser-desc">Gestione cookie Safari</div></div>
         </a>
         <a href="https://support.mozilla.org/it/kb/Attivare%20e%20disattivare%20i%20cookie" target="_blank" rel="noopener" class="browser-card">
           <div class="browser-icon" style="background:#FCEEE9;">🌐</div>
-          <div>
-            <div class="browser-name">Mozilla Firefox</div>
-            <div class="browser-desc">Gestione cookie Firefox</div>
-          </div>
+          <div><div class="browser-name">Mozilla Firefox</div><div class="browser-desc">Gestione cookie Firefox</div></div>
         </a>
       </div>
     </div>
@@ -336,83 +267,66 @@ footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;al
     <div class="section-block" id="consenso">
       <div class="section-num">Articolo 06</div>
       <h2 class="section-heading">Raccolta del <em>Consenso</em></h2>
-      <p>Al momento dell'accesso alla homepage del Sito, è presente un <strong>Banner informativo</strong> in materia di cookie che informa l'utente sul significato delle proprie azioni. In particolare:</p>
+      <p>Al momento dell'accesso al Sito, è presente un <strong>Banner informativo</strong> in materia di cookie:</p>
       <ul class="check-list">
-        <li>Cliccando su <strong>"Accetto tutti i cookie"</strong>, l'utente acconsente all'uso di tutti i cookie presenti sul Sito</li>
-        <li>Cliccando su <strong>"Solo cookie necessari"</strong> o chiudendo il banner, vengono installati esclusivamente i cookie tecnici indispensabili al funzionamento del Sito</li>
-        <li>Cliccando su <strong>"Impostazioni Cookie"</strong>, l'utente può scegliere quali categorie di cookie installare sul proprio dispositivo</li>
+        <li>Cliccando su <strong>"Accetto tutti i cookie"</strong>, l'utente acconsente all'uso di tutti i cookie</li>
+        <li>Cliccando su <strong>"Solo cookie necessari"</strong>, vengono installati esclusivamente i cookie tecnici</li>
+        <li>Cliccando su <strong>"Impostazioni Cookie"</strong>, l'utente può scegliere quali categorie installare</li>
       </ul>
-      <p style="margin-top:16px;">L'utente ha il diritto, ai sensi dell'art. 7 del GDPR, di <strong>modificare e/o revocare il proprio consenso in qualsiasi momento</strong> attraverso il tasto "Impostazioni Cookie" presente nel footer del Sito. Tale revoca non pregiudica la liceità del trattamento basata sul consenso prestato prima della revoca stessa.</p>
+      <p style="margin-top:14px;">L'utente può <strong>revocare il consenso in qualsiasi momento</strong> attraverso il tasto "Impostazioni Cookie" presente nel footer del Sito.</p>
     </div>
 
     <div class="section-block" id="trasferimento">
       <div class="section-num">Articolo 07</div>
       <h2 class="section-heading">Trasferimento <em>dei Dati</em></h2>
-      <p>I dati personali raccolti per mezzo dei cookie di prima parte installati da Dedicare Solutions S.R.L.S. presenti sul Sito <strong>non sono oggetto di trasferimento al di fuori dell'Unione Europea</strong>.</p>
-      <p>In ogni caso, ove si rendesse necessario, il Titolare potrà trasferire i dati personali anche in Paesi extra UE, garantendo sin d'ora che il trasferimento avverrà nel rispetto delle disposizioni di legge applicabili e, se necessario, stipulando specifici accordi che garantiscano un livello di protezione adeguato dei dati personali, o comunque adottando le clausole contrattuali standard previste dalla Commissione Europea per il trasferimento di dati personali extra-UE ai sensi dell'art. 46 del GDPR.</p>
-      <p>Con particolare riferimento ai trasferimenti di dati effettuati per mezzo di cookie di terze parti (es. Google Analytics), si rimanda alle rispettive politiche di trattamento dei dati dei singoli fornitori.</p>
+      <p>I dati raccolti tramite cookie di prima parte <strong>non sono trasferiti al di fuori dell'Unione Europea</strong>. In caso di necessità, il trasferimento avverrà adottando le clausole contrattuali standard previste dalla Commissione Europea ai sensi dell'art. 46 del GDPR.</p>
+      <p>Per i cookie di terze parti (es. Google Analytics) si rimanda alle rispettive politiche di trattamento dei dati.</p>
     </div>
 
     <div class="section-block" id="destinatari">
       <div class="section-num">Articolo 08</div>
       <h2 class="section-heading">Categorie di <em>Destinatari</em></h2>
-      <p>I dati personali raccolti tramite i cookie potranno essere condivisi con:</p>
+      <p>I dati raccolti tramite cookie potranno essere condivisi con:</p>
       <ul class="check-list">
-        <li>Personale dipendente e collaboratori di Dedicare Solutions S.R.L.S. autorizzati al trattamento, che abbiano ricevuto adeguate istruzioni operative e siano vincolati alla riservatezza ai sensi dell'art. 29 del GDPR</li>
-        <li>Fornitori di servizi tecnici e di manutenzione del Sito, debitamente nominati Responsabili del trattamento ai sensi dell'art. 28 del GDPR</li>
-        <li>Fornitori di servizi di analisi statistica (es. Google LLC per Google Analytics), nei limiti consentiti dalla normativa applicabile</li>
-        <li>Autorità pubbliche, enti e organi di controllo, nei casi previsti dalla legge o su ordine delle autorità competenti</li>
+        <li>Personale dipendente e collaboratori di Dedicare Solutions S.R.L.S. autorizzati al trattamento</li>
+        <li>Fornitori di servizi tecnici e di manutenzione del Sito</li>
+        <li>Fornitori di servizi di analisi statistica (es. Google LLC per Google Analytics)</li>
+        <li>Autorità pubbliche nei casi previsti dalla legge</li>
       </ul>
-      <p style="margin-top:16px;">I dati raccolti tramite cookie <strong>non vengono venduti, ceduti o condivisi con terzi per finalità commerciali o di marketing</strong>.</p>
+      <p style="margin-top:14px;">I dati <strong>non vengono venduti, ceduti o condivisi con terzi per finalità commerciali o di marketing</strong>.</p>
     </div>
 
     <div class="section-block" id="diritti">
       <div class="section-num">Articolo 09</div>
       <h2 class="section-heading">Diritti <em>dell'Interessato</em></h2>
-      <p>Coerentemente con quanto previsto dagli artt. 15–22 del GDPR, l'utente ha il diritto di chiedere al Titolare, in qualunque momento:</p>
+      <p>Ai sensi degli artt. 15–22 del GDPR, l'utente ha il diritto di chiedere in qualunque momento:</p>
       <ul class="check-list">
         <li>L'<strong>accesso</strong> ai propri dati personali trattati tramite cookie</li>
-        <li>La <strong>rettifica</strong> o la <strong>cancellazione</strong> degli stessi (diritto all'oblio)</li>
+        <li>La <strong>rettifica</strong> o la <strong>cancellazione</strong> degli stessi</li>
         <li>La <strong>limitazione del trattamento</strong> nei casi previsti dall'art. 18 del GDPR</li>
         <li>La <strong>portabilità dei dati</strong> nei casi previsti dall'art. 20 del GDPR</li>
-        <li>Di <strong>opporsi al trattamento</strong>, fatto salvo il diritto del Titolare di valutare l'istanza</li>
-        <li>Di proporre <strong>reclamo</strong> al Garante per la Protezione dei Dati Personali (<a href="https://www.garanteprivacy.it" target="_blank" style="color:var(--blue);">www.garanteprivacy.it</a>)</li>
+        <li>Di <strong>opporsi al trattamento</strong></li>
+        <li>Di proporre <strong>reclamo</strong> al Garante (<a href="https://www.garanteprivacy.it" target="_blank" style="color:var(--blue);">www.garanteprivacy.it</a>)</li>
       </ul>
-
       <div class="contact-card">
         <h4>Per esercitare i propri diritti, contattare:</h4>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <span>Email: <a href="mailto:info@dedicaresolutions.it">info@dedicaresolutions.it</a></span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H5.17L4 18.17V4z"/></svg></div>
-          <span>PEC: <a href="mailto:dedicaresolutionssrls@pec.it">dedicaresolutionssrls@pec.it</a></span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-          <span>Via Roma 80 – 20054 Segrate (MI)</span>
-        </div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>Email: <a href="mailto:info@dedicaresolutions.it">info@dedicaresolutions.it</a></span></div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H5.17L4 18.17V4z"/></svg></div><span>PEC: <a href="mailto:dedicaresolutionssrls@pec.it">dedicaresolutionssrls@pec.it</a></span></div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><span>Tel: <a href="tel:+393882536992">+39 882 536 992</a></span></div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><span>Via Roma 80 – 20054 Segrate (MI)</span></div>
       </div>
-
       <div class="update-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>
         Cookie Policy in vigore dal 22 Aprile 2026 · Ultimo aggiornamento: Aprile 2026
       </div>
     </div>
-
   </article>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div style="width:40px;height:40px;border-radius:50%;background:#0B5FA5;display:flex;align-items:center;justify-content:center;">
-      <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
-        <path d="M55 18 C45 18 38 25 38 35 C38 40 40 44 42 47 L42 55 L30 55 C24 55 20 59 20 65 L20 80 L70 80 L70 35 C70 25 63 18 55 18 Z" fill="white"/>
-        <path d="M38 55 C33 55 28 60 28 66 C28 72 32 76 36 78 C40 76 43 72 43 66 C43 60 42 55 38 55 Z" fill="#0B5FA5"/>
-        <circle cx="55" cy="30" r="7" fill="#0B5FA5"/>
-      </svg>
+    <div style="width:36px;height:36px;border-radius:50%;background:#0B5FA5;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="20" height="20" viewBox="0 0 100 100" fill="none"><path d="M55 18 C45 18 38 25 38 35 C38 40 40 44 42 47 L42 55 L30 55 C24 55 20 59 20 65 L20 80 L70 80 L70 35 C70 25 63 18 55 18 Z" fill="white"/><path d="M38 55 C33 55 28 60 28 66 C28 72 32 76 36 78 C40 76 43 72 43 66 C43 60 42 55 38 55 Z" fill="#0B5FA5"/><circle cx="55" cy="30" r="7" fill="#0B5FA5"/></svg>
     </div>
     <span class="footer-brand-text">Dedicare <b>Solutions</b></span>
   </div>
