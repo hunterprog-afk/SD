@@ -14,110 +14,102 @@
 }
 html{scroll-behavior:smooth;}
 body{font-family:'Georgia',serif;background:var(--white);color:var(--black);line-height:1.7;overflow-x:hidden;}
-
-/* TOP BAR */
-.topbar{background:var(--blue-dark);padding:9px 5%;display:flex;align-items:center;justify-content:space-between;}
-.topbar-left{font-family:sans-serif;font-size:12px;color:#B8D4EB;letter-spacing:.04em;}
-.topbar-right{display:flex;gap:22px;}
-.topbar-right a{font-family:sans-serif;font-size:12px;color:#fff;text-decoration:none;display:flex;align-items:center;gap:6px;}
-.topbar-right a:hover{color:#F4A442;}
-
-/* NAV */
-nav{background:var(--white);border-bottom:1px solid var(--border-light);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:74px;box-shadow:0 2px 12px rgba(11,95,165,.06);}
-.nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none;}
-.logo-circle{width:46px;height:46px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;border:2px solid var(--blue);}
-.nav-brand{font-size:22px;color:var(--black);letter-spacing:.02em;}
+nav{background:var(--white);border-bottom:1px solid var(--border-light);padding:0 5%;display:flex;align-items:center;justify-content:space-between;height:64px;box-shadow:0 2px 12px rgba(11,95,165,.06);position:sticky;top:0;z-index:100;}
+.nav-logo{display:flex;align-items:center;gap:10px;text-decoration:none;}
+.logo-circle{width:40px;height:40px;border-radius:50%;background:#111;display:flex;align-items:center;justify-content:center;border:2px solid var(--blue);flex-shrink:0;}
+.nav-brand{font-size:19px;color:var(--black);}
 .nav-brand b{color:var(--blue);font-weight:400;font-style:italic;}
-.nav-back{font-family:sans-serif;font-size:13px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:8px;font-weight:500;border:1.5px solid var(--blue);padding:8px 18px;border-radius:3px;transition:all .2s;}
+.nav-back{font-family:sans-serif;font-size:12px;color:var(--blue);text-decoration:none;display:flex;align-items:center;gap:7px;font-weight:500;border:1.5px solid var(--blue);padding:8px 14px;border-radius:3px;transition:all .2s;min-height:40px;white-space:nowrap;}
 .nav-back:hover{background:var(--blue);color:#fff;}
-
-/* BREADCRUMB */
-.breadcrumb{background:var(--blue-soft);padding:14px 5%;border-bottom:1px solid var(--border-light);}
-.breadcrumb-inner{font-family:sans-serif;font-size:13px;color:var(--gray);display:flex;align-items:center;gap:8px;}
+.breadcrumb{background:var(--blue-soft);padding:10px 5%;border-bottom:1px solid var(--border-light);}
+.breadcrumb-inner{font-family:sans-serif;font-size:12px;color:var(--gray);display:flex;align-items:center;gap:7px;flex-wrap:wrap;}
 .breadcrumb-inner a{color:var(--blue);text-decoration:none;}
-.breadcrumb-inner a:hover{text-decoration:underline;}
-.breadcrumb-sep{color:var(--gray-light);}
-
-/* HERO SECTION */
-.page-hero{background:linear-gradient(135deg,var(--blue-soft) 0%,var(--cream) 100%);padding:56px 5% 48px;border-bottom:1px solid var(--border-light);}
-.page-tag{font-family:sans-serif;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;font-weight:600;}
-.page-title{font-size:clamp(2rem,4vw,3rem);font-weight:400;color:var(--black);margin-bottom:16px;line-height:1.15;}
-.page-meta{font-family:sans-serif;font-size:13px;color:var(--gray);display:flex;gap:24px;flex-wrap:wrap;}
-.page-meta span{display:flex;align-items:center;gap:6px;}
-
-/* LAYOUT */
-.content-wrap{display:grid;grid-template-columns:260px 1fr;gap:48px;padding:56px 5%;max-width:1200px;margin:0 auto;}
-
-/* SIDEBAR */
-.sidebar{position:sticky;top:24px;align-self:start;}
-.sidebar-title{font-family:sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:16px;font-weight:600;}
+.page-hero{background:linear-gradient(135deg,var(--blue-soft) 0%,var(--cream) 100%);padding:44px 5% 36px;border-bottom:1px solid var(--border-light);}
+.page-tag{font-family:sans-serif;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--blue);margin-bottom:10px;font-weight:600;}
+.page-title{font-size:clamp(1.6rem,3.5vw,2.4rem);font-weight:400;color:var(--black);margin-bottom:12px;line-height:1.15;}
+.page-meta{font-family:sans-serif;font-size:12px;color:var(--gray);display:flex;gap:16px;flex-wrap:wrap;}
+.page-meta span{display:flex;align-items:center;gap:5px;}
+.content-wrap{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:44px 5%;max-width:1100px;margin:0 auto;}
+.sidebar{position:sticky;top:80px;align-self:start;}
+.sidebar-title{font-family:sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:12px;font-weight:600;}
 .sidebar-nav{list-style:none;display:flex;flex-direction:column;gap:2px;}
-.sidebar-nav a{font-family:sans-serif;font-size:13px;color:var(--gray);text-decoration:none;padding:9px 14px;border-radius:4px;display:block;border-left:2px solid transparent;transition:all .2s;}
+.sidebar-nav a{font-family:sans-serif;font-size:12px;color:var(--gray);text-decoration:none;padding:8px 12px;border-radius:4px;display:flex;align-items:center;border-left:2px solid transparent;transition:all .2s;min-height:40px;}
 .sidebar-nav a:hover{color:var(--blue);background:var(--blue-soft);border-color:var(--blue);}
-
-/* ARTICLE */
 article{min-width:0;}
-.section-block{margin-bottom:48px;padding-bottom:48px;border-bottom:1px solid var(--border-light);}
+.section-block{margin-bottom:40px;padding-bottom:40px;border-bottom:1px solid var(--border-light);}
 .section-block:last-child{border-bottom:none;}
-.section-num{font-family:sans-serif;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:8px;font-weight:600;}
-.section-heading{font-size:1.5rem;font-weight:400;color:var(--black);margin-bottom:20px;line-height:1.25;}
+.section-num{font-family:sans-serif;font-size:10px;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:6px;font-weight:600;}
+.section-heading{font-size:1.35rem;font-weight:400;color:var(--black);margin-bottom:16px;line-height:1.25;}
 .section-heading em{font-style:italic;color:var(--blue);}
-p{font-family:sans-serif;font-size:15px;color:var(--gray);line-height:1.85;margin-bottom:16px;}
+p{font-family:sans-serif;font-size:14px;color:var(--gray);line-height:1.85;margin-bottom:14px;}
 p:last-child{margin-bottom:0;}
 strong{color:var(--black);font-weight:600;}
-ol{font-family:sans-serif;font-size:15px;color:var(--gray);line-height:1.85;padding-left:20px;margin-top:12px;}
-ol li{margin-bottom:12px;}
-ul.check-list{list-style:none;padding:0;margin-top:12px;display:flex;flex-direction:column;gap:10px;}
-ul.check-list li{font-family:sans-serif;font-size:14px;color:var(--gray);padding-left:24px;position:relative;line-height:1.7;}
-ul.check-list li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:13px;}
-
-/* INFO BOX */
-.info-box{background:var(--blue-soft);border:1px solid var(--blue-light);border-left:4px solid var(--blue);padding:20px 24px;border-radius:0 8px 8px 0;margin:24px 0;}
-.info-box p{font-size:14px;color:var(--black);margin:0;}
-.info-box strong{color:var(--blue);}
-
-/* CONTACT CARD */
-.contact-card{background:var(--white);border:1px solid var(--border-light);border-radius:12px;padding:28px 24px;margin-top:20px;box-shadow:0 4px 16px rgba(11,95,165,.06);}
-.contact-card h4{font-size:15px;font-weight:400;margin-bottom:16px;color:var(--black);}
-.contact-row{display:flex;gap:12px;align-items:center;margin-bottom:10px;font-family:sans-serif;font-size:13px;color:var(--gray);}
+ol{font-family:sans-serif;font-size:14px;color:var(--gray);line-height:1.85;padding-left:18px;margin-top:10px;}
+ol li{margin-bottom:10px;}
+ul.check-list{list-style:none;padding:0;margin-top:10px;display:flex;flex-direction:column;gap:9px;}
+ul.check-list li{font-family:sans-serif;font-size:13px;color:var(--gray);padding-left:22px;position:relative;line-height:1.7;}
+ul.check-list li::before{content:'→';position:absolute;left:0;color:var(--blue);font-size:12px;}
+.info-box{background:var(--blue-soft);border:1px solid var(--blue-light);border-left:4px solid var(--blue);padding:16px 20px;border-radius:0 8px 8px 0;margin:18px 0;}
+.info-box p{font-size:13px;color:var(--black);margin:0;}
+.info-box a{color:var(--blue);}
+.contact-card{background:var(--white);border:1px solid var(--border-light);border-radius:10px;padding:22px 20px;margin-top:16px;box-shadow:0 4px 14px rgba(11,95,165,.06);}
+.contact-card h4{font-size:14px;font-weight:400;margin-bottom:14px;color:var(--black);}
+.contact-row{display:flex;gap:10px;align-items:center;margin-bottom:9px;font-family:sans-serif;font-size:12px;color:var(--gray);min-height:40px;}
 .contact-row a{color:var(--blue);text-decoration:none;}
-.contact-row a:hover{text-decoration:underline;}
 .contact-icon{width:32px;height:32px;background:var(--blue-light);border-radius:6px;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
 .contact-icon svg{width:14px;height:14px;stroke:var(--blue);fill:none;stroke-width:1.7;}
-
-/* UPDATE BADGE */
-.update-badge{display:inline-flex;align-items:center;gap:8px;background:var(--blue-soft);border:1px solid var(--blue-light);padding:6px 14px;border-radius:20px;font-family:sans-serif;font-size:12px;color:var(--blue);font-weight:600;margin-top:24px;}
-
-/* FOOTER */
-footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:80px;}
-.footer-brand{display:flex;align-items:center;gap:12px;}
-.footer-brand-text{font-family:Georgia,serif;font-size:18px;color:#fff;}
+.update-badge{display:inline-flex;align-items:center;gap:7px;background:var(--blue-soft);border:1px solid var(--blue-light);padding:7px 14px;border-radius:20px;font-family:sans-serif;font-size:11px;color:var(--blue);font-weight:600;margin-top:20px;flex-wrap:wrap;}
+footer{background:#1A2332;font-family:sans-serif;padding:22px 5%;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:60px;}
+.footer-brand{display:flex;align-items:center;gap:10px;}
+.footer-brand-text{font-family:Georgia,serif;font-size:17px;color:#fff;}
 .footer-brand-text b{color:var(--teal);font-weight:400;font-style:italic;}
-.footer-links{display:flex;gap:20px;}
-.footer-links a{font-family:sans-serif;font-size:12px;color:#8B96A5;text-decoration:none;transition:color .2s;}
+.footer-links{display:flex;gap:14px;flex-wrap:wrap;}
+.footer-links a{font-family:sans-serif;font-size:11px;color:#8B96A5;text-decoration:none;transition:color .2s;min-height:40px;display:flex;align-items:center;}
 .footer-links a:hover{color:#fff;}
-.footer-copy{font-family:sans-serif;font-size:11px;color:#3D4B5C;width:100%;text-align:center;padding-top:16px;border-top:1px solid #252d3d;margin-top:8px;}
-
+.footer-copy{font-family:sans-serif;font-size:10px;color:#3D4B5C;width:100%;text-align:center;padding-top:14px;border-top:1px solid #252d3d;margin-top:6px;}
+@media(max-width:1024px){.content-wrap{grid-template-columns:180px 1fr;gap:28px;padding:32px 5%;}}
 @media(max-width:768px){
-  .content-wrap{grid-template-columns:1fr;gap:32px;padding:32px 5%;}
-  .sidebar{position:static;}
-  .topbar{flex-direction:column;gap:4px;text-align:center;}
-  .page-hero{padding:36px 5% 32px;}
-  footer{flex-direction:column;text-align:center;}
-  .footer-links{flex-wrap:wrap;justify-content:center;}
+  nav{height:auto;min-height:58px;padding:10px 5%;}
+  .nav-brand{font-size:16px;}
+  .logo-circle{width:36px;height:36px;}
+  .nav-back{font-size:11px;padding:7px 10px;}
+  .breadcrumb{padding:8px 5%;}
+  .page-hero{padding:26px 5% 22px;}
+  .page-title{font-size:1.6rem;}
+  .page-meta{gap:10px;font-size:11px;}
+  .content-wrap{grid-template-columns:1fr;gap:0;padding:0;}
+  .sidebar{position:static;background:var(--blue-soft);padding:16px 5%;border-bottom:1px solid var(--border-light);}
+  .sidebar-nav{flex-direction:row;flex-wrap:wrap;gap:6px;}
+  .sidebar-nav a{padding:5px 11px;border-left:none;border:1px solid var(--border-light);border-radius:20px;background:#fff;font-size:11px;min-height:32px;}
+  .sidebar-nav a:hover{border-color:var(--blue);}
+  article{padding:24px 5%;}
+  .section-block{margin-bottom:28px;padding-bottom:28px;}
+  .section-heading{font-size:1.15rem;}
+  p,ol{font-size:13px;}
+  ol{padding-left:14px;}
+  .contact-card{padding:16px 14px;}
+  footer{flex-direction:column;text-align:center;padding:20px 5%;}
+  .footer-links{justify-content:center;}
+  .footer-brand{justify-content:center;}
+}
+@media(max-width:480px){
+  nav{padding:8px 4%;}
+  .nav-brand{font-size:14px;}
+  .logo-circle{width:32px;height:32px;}
+  .nav-back{font-size:10px;padding:6px 8px;}
+  .page-hero{padding:20px 4% 18px;}
+  .page-title{font-size:1.4rem;}
+  article{padding:20px 4%;}
+  .section-heading{font-size:1.05rem;}
 }
 </style>
 </head>
 <body>
 
-<!-- TOP BAR -->
-
-
-<!-- NAV -->
 <nav>
   <a href="index.html" class="nav-logo">
     <div class="logo-circle">
-      <svg width="28" height="28" viewBox="0 0 100 100" fill="none">
+      <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
         <path d="M55 18 C45 18 38 25 38 35 C38 40 40 44 42 47 L42 55 L30 55 C24 55 20 59 20 65 L20 80 L70 80 L70 35 C70 25 63 18 55 18 Z" fill="white"/>
         <path d="M38 55 C33 55 28 60 28 66 C28 72 32 76 36 78 C40 76 43 72 43 66 C43 60 42 55 38 55 Z" fill="#111"/>
         <circle cx="55" cy="30" r="7" fill="#111"/>
@@ -126,81 +118,62 @@ footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;al
     <span class="nav-brand">Dedicare <b>Solutions</b></span>
   </a>
   <a href="index.html" class="nav-back">
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
     Torna alla Home
   </a>
 </nav>
 
-<!-- BREADCRUMB -->
 <div class="breadcrumb">
   <div class="breadcrumb-inner">
     <a href="index.html">Dedicare Solutions Home</a>
-    <span class="breadcrumb-sep">›</span>
+    <span style="color:var(--gray-light);">›</span>
     <span>Privacy Policy</span>
   </div>
 </div>
 
-<!-- PAGE HERO -->
 <div class="page-hero">
   <p class="page-tag">Informazioni Legali</p>
   <h1 class="page-title">Privacy Policy</h1>
   <div class="page-meta">
-    <span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-      In vigore dal 22 Aprile 2026
-    </span>
-    <span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>
-      Ultimo aggiornamento: Aprile 2026
-    </span>
-    <span>
-      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      Conforme al Regolamento UE 2016/679 (GDPR)
-    </span>
+    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>In vigore dal 22 Aprile 2026</span>
+    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>Ultimo aggiornamento: Aprile 2026</span>
+    <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#5A6778" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>Conforme al Regolamento UE 2016/679 (GDPR)</span>
   </div>
 </div>
 
-<!-- MAIN CONTENT -->
 <div class="content-wrap">
-
-  <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-title">Indice</div>
     <ul class="sidebar-nav">
-      <li><a href="#titolare">1. Titolare del Trattamento</a></li>
-      <li><a href="#interessati">2. Categorie di Interessati</a></li>
+      <li><a href="#titolare">1. Titolare</a></li>
+      <li><a href="#interessati">2. Interessati</a></li>
       <li><a href="#dati">3. Dati Trattati</a></li>
-      <li><a href="#finalita">4. Finalità e Base Giuridica</a></li>
-      <li><a href="#modalita">5. Modalità e Conservazione</a></li>
-      <li><a href="#comunicazione">6. Comunicazione dei Dati</a></li>
-      <li><a href="#trasferimento">7. Trasferimento Extra-UE</a></li>
-      <li><a href="#diritti">8. Diritti degli Interessati</a></li>
+      <li><a href="#finalita">4. Finalità</a></li>
+      <li><a href="#modalita">5. Modalità</a></li>
+      <li><a href="#comunicazione">6. Comunicazione</a></li>
+      <li><a href="#trasferimento">7. Trasferimento</a></li>
+      <li><a href="#diritti">8. Diritti</a></li>
       <li><a href="#contatti-privacy">9. Contatti</a></li>
     </ul>
   </aside>
 
-  <!-- ARTICLE -->
   <article>
-
     <div class="section-block">
-      <p>Gentile Utente, nel corso della consultazione e dell'utilizzo del sito internet <strong>dedicaresolutions.it</strong> e dei servizi Dedicare Solutions (di seguito, "<strong>Sito</strong>") verranno raccolti e trattati alcuni Suoi dati personali così come definiti dall'art. 4, par. 1 del Regolamento UE 2016/679 (di seguito, il "<strong>GDPR</strong>").</p>
-      <p>Lo scopo della presente informativa (di seguito, l'"<strong>Informativa</strong>") è quello di offrire una panoramica esaustiva sulle finalità, modalità di raccolta e utilizzo dei dati personali nonché sui tempi di conservazione dei dati di ciascun interessato (di seguito, "<strong>Interessato</strong>").</p>
-      <p>La presente Informativa viene fornita ai sensi dell'art. 13 del GDPR e nel rispetto delle leggi europee e italiane che lo integrano ("<strong>Normativa Privacy</strong>"). Ciascun Interessato è invitato a prendere visione della presente Informativa, così da comprendere al meglio le modalità di trattamento dei propri dati personali.</p>
+      <p>Gentile Utente, nel corso della consultazione del sito <strong>dedicaresolutions.it</strong> verranno raccolti e trattati alcuni Suoi dati personali ai sensi del Regolamento UE 2016/679 (<strong>GDPR</strong>). La presente informativa viene fornita ai sensi dell'art. 13 del GDPR.</p>
     </div>
 
     <div class="section-block" id="titolare">
       <div class="section-num">Articolo 01</div>
       <h2 class="section-heading">Titolare del <em>Trattamento</em></h2>
-      <p>Il titolare del trattamento dei Suoi dati personali è <strong>Dedicare Solutions S.R.L.S.</strong> (di seguito, "<strong>Titolare</strong>"), con sede legale in:</p>
+      <p>Il titolare del trattamento dei Suoi dati personali è <strong>Dedicare Solutions S.R.L.S.</strong></p>
       <div class="info-box">
         <p><strong>Dedicare Solutions S.R.L.S.</strong><br/>
         Via Roma 80 – 20054 Segrate (MI)<br/>
         P.IVA e C.F.: IT11600760968 · REA: MI–2613682<br/>
-        Email: <a href="mailto:info@dedicaresolutions.it" style="color:var(--blue);">info@dedicaresolutions.it</a><br/>
-        PEC: <a href="mailto:dedicaresolutionssrls@pec.it" style="color:var(--blue);">dedicaresolutionssrls@pec.it</a><br/>
-        Tel: <a href="tel:+393287730194" style="color:var(--blue);">+39 328 773 0194</a></p>
+        Email: <a href="mailto:info@dedicaresolutions.it">info@dedicaresolutions.it</a><br/>
+        PEC: <a href="mailto:dedicaresolutionssrls@pec.it">dedicaresolutionssrls@pec.it</a><br/>
+        Tel: <a href="tel:+393882536992">+39 882 536 992</a></p>
       </div>
-      <p>Per qualsiasi questione relativa al trattamento dei Suoi dati personali, può contattare il Titolare ai recapiti sopra indicati.</p>
     </div>
 
     <div class="section-block" id="interessati">
@@ -219,133 +192,106 @@ footer{background:#1A2332;font-family:sans-serif;padding:28px 5%;display:flex;al
     <div class="section-block" id="dati">
       <div class="section-num">Articolo 03</div>
       <h2 class="section-heading">Categorie dei <em>Dati Trattati</em></h2>
-      <p>Attraverso il Sito e i servizi Dedicare Solutions vengono raccolte e trattate le seguenti categorie di dati personali:</p>
       <ol>
-        <li><strong>Dati di navigazione:</strong> trattati al fine di garantire il corretto funzionamento del Sito o per ottenere informazioni sulle preferenze e abitudini di utilizzo. Tali dati potrebbero essere trattati anche attraverso cookies. Si invita a leggere la specifica Cookie Policy presente sul Sito.</li>
-        <li><strong>Dati comuni:</strong> informazioni personali quali nome, cognome, data di nascita, codice fiscale, indirizzo, sesso; informazioni di contatto quali numero di telefono fisso e/o mobile, indirizzo email.</li>
-        <li><strong>Dati relativi alla salute:</strong> in quanto Dedicare Solutions eroga servizi sanitari e socio-sanitari, potrebbero essere trattati dati particolari ai sensi dell'art. 9 del GDPR relativi allo stato di salute del paziente, esclusivamente ai fini dell'erogazione del servizio assistenziale richiesto e con il consenso esplicito dell'interessato.</li>
-        <li><strong>Dati di terzi:</strong> nel caso in cui dati personali di terzi (es. familiari del paziente) siano forniti volontariamente dagli Interessati, questi ultimi si qualificano come autonomi titolari del trattamento, assumendosi tutti gli obblighi previsti dalla normativa applicabile.</li>
+        <li><strong>Dati di navigazione:</strong> trattati per garantire il corretto funzionamento del Sito o per ottenere informazioni sulle preferenze di utilizzo. Potrebbero essere trattati anche attraverso cookies (si rinvia alla Cookie Policy).</li>
+        <li><strong>Dati comuni:</strong> nome, cognome, data di nascita, codice fiscale, indirizzo, numero di telefono, indirizzo email.</li>
+        <li><strong>Dati relativi alla salute:</strong> in quanto Dedicare Solutions eroga servizi sanitari, potrebbero essere trattati dati particolari ai sensi dell'art. 9 del GDPR relativi allo stato di salute del paziente, esclusivamente ai fini dell'erogazione del servizio assistenziale richiesto e con il consenso esplicito dell'interessato.</li>
+        <li><strong>Dati di terzi:</strong> nel caso in cui dati personali di terzi siano forniti volontariamente dagli Interessati, questi ultimi si qualificano come autonomi titolari del trattamento.</li>
       </ol>
     </div>
 
     <div class="section-block" id="finalita">
       <div class="section-num">Articolo 04</div>
       <h2 class="section-heading">Finalità e Base <em>Giuridica</em></h2>
-      <p>I dati personali saranno trattati dal Titolare per le seguenti finalità:</p>
       <ol>
-        <li><strong>Erogazione dei servizi sanitari e socio-sanitari:</strong> trattamento necessario per l'esecuzione di un contratto o per l'adozione di misure precontrattuali su richiesta dell'interessato, ai sensi dell'art. 6, par. 1, lett. b) del GDPR, e per finalità di medicina preventiva e assistenza sanitaria, ai sensi dell'art. 9, par. 2, lett. h) del GDPR.</li>
-        <li><strong>Gestione del Sito e dei contatti:</strong> trattamento necessario per il perseguimento del legittimo interesse del Titolare, ai sensi dell'art. 6, par. 1, lett. f) del GDPR, volto a garantire il corretto funzionamento del Sito e la gestione delle richieste di informazioni.</li>
-        <li><strong>Adempimento di obblighi legali:</strong> trattamento necessario per adempiere a un obbligo legale al quale è soggetto il Titolare, ai sensi dell'art. 6, par. 1, lett. c) del GDPR.</li>
-        <li><strong>Tutela dei diritti in sede giudiziaria:</strong> per qualsiasi attività difensiva necessaria per far valere un diritto del Titolare in sede giudiziaria o in una fase propedeutica al giudizio, ai sensi degli artt. 6, par. 1, lett. f) e 9, par. 2, lett. f) del GDPR.</li>
-        <li><strong>Sicurezza del Sito:</strong> sulla base del legittimo interesse del Titolare, ai sensi dell'art. 6, par. 1, lett. f) del GDPR, per garantire la sicurezza informatica del Sito.</li>
+        <li><strong>Erogazione dei servizi sanitari:</strong> necessario per l'esecuzione di un contratto (art. 6, par. 1, lett. b) e per finalità di medicina preventiva e assistenza sanitaria (art. 9, par. 2, lett. h) del GDPR.</li>
+        <li><strong>Gestione del Sito e dei contatti:</strong> necessario per il perseguimento del legittimo interesse del Titolare (art. 6, par. 1, lett. f) del GDPR.</li>
+        <li><strong>Adempimento di obblighi legali:</strong> necessario per adempiere a un obbligo legale (art. 6, par. 1, lett. c) del GDPR.</li>
+        <li><strong>Tutela dei diritti in sede giudiziaria:</strong> per qualsiasi attività difensiva necessaria (artt. 6, par. 1, lett. f) e 9, par. 2, lett. f) del GDPR.</li>
+        <li><strong>Sicurezza del Sito:</strong> sulla base del legittimo interesse del Titolare (art. 6, par. 1, lett. f) del GDPR.</li>
       </ol>
     </div>
 
     <div class="section-block" id="modalita">
       <div class="section-num">Articolo 05</div>
       <h2 class="section-heading">Modalità del Trattamento e <em>Conservazione</em></h2>
-      <p>Il trattamento dei dati personali viene effettuato dal Titolare in conformità alla Normativa Privacy:</p>
-      <ul class="check-list">
-        <li>Con mezzi manuali e con l'ausilio di mezzi elettronici o automatizzati, idonei a garantirne la sicurezza e la riservatezza</li>
-        <li>Adottando misure tecniche e organizzative adeguate a proteggere i dati da accessi non autorizzati, perdita, distruzione o divulgazione</li>
-        <li>Direttamente dall'organizzazione del Titolare e/o da responsabili del trattamento individuati dal Titolare, sulla base di un contratto ai sensi dell'art. 28 del GDPR</li>
-      </ul>
-      <p style="margin-top:20px;"><strong>Tempi di conservazione:</strong></p>
+      <p>Il trattamento avviene con mezzi manuali ed elettronici, adottando misure tecniche e organizzative adeguate a proteggere i dati da accessi non autorizzati.</p>
+      <p><strong>Tempi di conservazione:</strong></p>
       <ol>
         <li><strong>Dati di navigazione:</strong> conservati per la durata della sessione di navigazione.</li>
-        <li><strong>Dati per l'erogazione dei servizi sanitari:</strong> conservati per il tempo necessario all'erogazione del servizio e, successivamente, per il periodo previsto dalla normativa sanitaria applicabile (generalmente 10 anni).</li>
-        <li><strong>Dati per fini difensivi:</strong> conservati per tutta la durata del contenzioso, fino all'esaurimento dei termini di impugnazione.</li>
-        <li><strong>Dati di contatto:</strong> conservati fino alla revoca del consenso o per il tempo strettamente necessario al perseguimento della finalità per cui sono stati raccolti.</li>
-        <li><strong>Dati per la sicurezza del Sito:</strong> conservati per il tempo sufficiente a identificare, analizzare e rispondere a incidenti di sicurezza.</li>
+        <li><strong>Dati per l'erogazione dei servizi sanitari:</strong> conservati per il tempo necessario all'erogazione del servizio e successivamente per il periodo previsto dalla normativa sanitaria (generalmente 10 anni).</li>
+        <li><strong>Dati per fini difensivi:</strong> conservati per tutta la durata del contenzioso.</li>
+        <li><strong>Dati di contatto:</strong> conservati fino alla revoca del consenso o per il tempo necessario al perseguimento della finalità.</li>
       </ol>
     </div>
 
     <div class="section-block" id="comunicazione">
       <div class="section-num">Articolo 06</div>
       <h2 class="section-heading">Comunicazione <em>dei Dati</em></h2>
-      <p>Nel perseguimento delle finalità indicate, i dati personali potrebbero essere comunicati e/o condivisi con:</p>
+      <p>I dati personali potrebbero essere comunicati con:</p>
       <ul class="check-list">
-        <li>Medici di medicina generale, specialisti e strutture ospedaliere partner, esclusivamente per finalità di cura del paziente</li>
-        <li>Fornitori di servizi informatici e tecnologici che supportano l'operatività del Sito, nominati responsabili del trattamento ai sensi dell'art. 28 del GDPR</li>
-        <li>Autorità pubbliche, organismi sanitari di controllo e pubbliche amministrazioni, nei casi previsti dalla legge</li>
+        <li>Medici di medicina generale, specialisti e strutture ospedaliere partner, esclusivamente per finalità di cura</li>
+        <li>Fornitori di servizi informatici e tecnologici nominati responsabili del trattamento ai sensi dell'art. 28 del GDPR</li>
+        <li>Autorità pubbliche e organismi sanitari nei casi previsti dalla legge</li>
         <li>Professionisti legali, fiscali e contabili che assistono il Titolare</li>
       </ul>
-      <p style="margin-top:16px;">I Dati Personali non saranno mai ceduti a terzi per finalità commerciali o di marketing senza il previo consenso esplicito dell'interessato.</p>
+      <p style="margin-top:14px;">I dati personali <strong>non saranno mai ceduti a terzi per finalità commerciali o di marketing</strong> senza previo consenso esplicito.</p>
     </div>
 
     <div class="section-block" id="trasferimento">
       <div class="section-num">Articolo 07</div>
       <h2 class="section-heading">Trasferimento dei Dati <em>fuori dall'Unione Europea</em></h2>
-      <p>I dati personali non sono soggetti a diffusione ovvero a trasferimento verso Paesi terzi rispetto all'Unione Europea od organizzazioni internazionali.</p>
-      <p>Qualora tale trasferimento dovesse rendersi necessario per esigenze organizzative del Titolare, esso avverrà esclusivamente verso Paesi considerati sicuri dalla Commissione Europea o, in ogni caso, secondo una delle modalità consentite dalla legge vigente e nel rispetto delle appropriate garanzie di cui all'art. 46 del GDPR, ad esempio tramite la sottoscrizione delle Clausole Contrattuali Standard approvate dalla Commissione ovvero sulla base delle deroghe previste dall'art. 49.</p>
+      <p>I dati personali non sono soggetti a trasferimento verso Paesi terzi rispetto all'Unione Europea od organizzazioni internazionali.</p>
+      <p>Qualora tale trasferimento dovesse rendersi necessario, avverrà esclusivamente verso Paesi considerati sicuri dalla Commissione Europea o, in ogni caso, secondo le modalità consentite dalla legge vigente e nel rispetto delle appropriate garanzie di cui all'art. 46 del GDPR.</p>
     </div>
 
     <div class="section-block" id="diritti">
       <div class="section-num">Articolo 08</div>
       <h2 class="section-heading">Diritti <em>degli Interessati</em></h2>
-      <p>Ai sensi degli artt. da 15 a 22 del GDPR, l'Interessato ha il diritto di ottenere, a cura del Titolare, la conferma che sia o meno in corso un trattamento di dati personali che lo riguardano. In tal caso, ha il diritto di:</p>
+      <p>Ai sensi degli artt. da 15 a 22 del GDPR, l'Interessato ha il diritto di:</p>
       <ol>
         <li>Conoscere le <strong>finalità del trattamento</strong> e le categorie di dati trattati</li>
-        <li>Conoscere i <strong>destinatari</strong> a cui i dati sono stati o saranno comunicati</li>
-        <li>Conoscere il <strong>periodo di conservazione</strong> previsto per i dati</li>
-        <li>Chiedere la <strong>rettifica o la cancellazione</strong> dei dati personali (diritto all'oblio)</li>
+        <li>Conoscere i <strong>destinatari</strong> a cui i dati sono stati comunicati</li>
+        <li>Chiedere la <strong>rettifica o la cancellazione</strong> dei dati (diritto all'oblio)</li>
         <li>Chiedere la <strong>limitazione del trattamento</strong> nei casi previsti dal GDPR</li>
-        <li><strong>Opporsi al trattamento</strong>, fatto salvo il diritto del Titolare di valutare l'istanza</li>
-        <li>Proporre <strong>reclamo</strong> all'autorità di controllo (Garante per la Protezione dei Dati Personali — www.garanteprivacy.it)</li>
-        <li><strong>Revocare il consenso</strong> in qualsiasi momento, senza pregiudicare la liceità del trattamento precedente</li>
-        <li>Richiedere la <strong>portabilità dei dati</strong> nei casi e con i limiti previsti dal GDPR</li>
-        <li>Essere informato dell'eventuale esistenza di un <strong>processo decisionale automatizzato</strong>, compresa la profilazione</li>
+        <li><strong>Opporsi al trattamento</strong></li>
+        <li>Proporre <strong>reclamo</strong> al Garante per la Protezione dei Dati Personali (www.garanteprivacy.it)</li>
+        <li><strong>Revocare il consenso</strong> in qualsiasi momento</li>
+        <li>Richiedere la <strong>portabilità dei dati</strong> nei casi previsti dal GDPR</li>
       </ol>
-      <p style="margin-top:16px;">Le richieste vanno rivolte per iscritto al Titolare ai recapiti indicati nella sezione seguente. Il Titolare risponderà entro 30 giorni dalla ricezione della richiesta.</p>
+      <p style="margin-top:14px;">Le richieste vanno rivolte per iscritto al Titolare. Il Titolare risponderà entro 30 giorni dalla ricezione.</p>
     </div>
 
     <div class="section-block" id="contatti-privacy">
       <div class="section-num">Articolo 09</div>
       <h2 class="section-heading">Contatti per la <em>Privacy</em></h2>
-      <p>Per esercitare i propri diritti o per qualsiasi informazione relativa al trattamento dei dati personali, l'Interessato può contattare il Titolare attraverso i seguenti canali:</p>
+      <p>Per esercitare i propri diritti o per qualsiasi informazione relativa al trattamento dei dati personali:</p>
       <div class="contact-card">
         <h4>Dedicare Solutions S.R.L.S. — Responsabile Privacy</h4>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
-          <span>Email: <a href="mailto:info@dedicaresolutions.it">info@dedicaresolutions.it</a></span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H5.17L4 18.17V4z"/></svg></div>
-          <span>PEC: <a href="mailto:dedicaresolutionssrls@pec.it">dedicaresolutionssrls@pec.it</a></span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div>
-          <span>Tel: <a href="tel:+393287730194">+39 328 773 0194</a></span>
-        </div>
-        <div class="contact-row">
-          <div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div>
-          <span>Via Roma 80 – 20054 Segrate (MI)</span>
-        </div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><span>Email: <a href="mailto:info@dedicaresolutions.it">info@dedicaresolutions.it</a></span></div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v13H5.17L4 18.17V4z"/></svg></div><span>PEC: <a href="mailto:dedicaresolutionssrls@pec.it">dedicaresolutionssrls@pec.it</a></span></div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.9.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.9.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><span>Tel: <a href="tel:+393882536992">+39 882 536 992</a></span></div>
+        <div class="contact-row"><div class="contact-icon"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg></div><span>Via Roma 80 – 20054 Segrate (MI)</span></div>
       </div>
       <div class="update-badge">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 4"/></svg>
         Informativa in vigore dal 22 Aprile 2026 · Ultimo aggiornamento: Aprile 2026
       </div>
     </div>
-
   </article>
 </div>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-brand">
-    <div style="width:40px;height:40px;border-radius:50%;background:#0B5FA5;display:flex;align-items:center;justify-content:center;">
-      <svg width="22" height="22" viewBox="0 0 100 100" fill="none">
-        <path d="M55 18 C45 18 38 25 38 35 C38 40 40 44 42 47 L42 55 L30 55 C24 55 20 59 20 65 L20 80 L70 80 L70 35 C70 25 63 18 55 18 Z" fill="white"/>
-        <path d="M38 55 C33 55 28 60 28 66 C28 72 32 76 36 78 C40 76 43 72 43 66 C43 60 42 55 38 55 Z" fill="#0B5FA5"/>
-        <circle cx="55" cy="30" r="7" fill="#0B5FA5"/>
-      </svg>
+    <div style="width:36px;height:36px;border-radius:50%;background:#0B5FA5;display:flex;align-items:center;justify-content:center;flex-shrink:0;">
+      <svg width="20" height="20" viewBox="0 0 100 100" fill="none"><path d="M55 18 C45 18 38 25 38 35 C38 40 40 44 42 47 L42 55 L30 55 C24 55 20 59 20 65 L20 80 L70 80 L70 35 C70 25 63 18 55 18 Z" fill="white"/><path d="M38 58 C33 58 28 62 28 68 C28 74 32 78 36 80 C40 78 43 74 43 68 C43 62 42 58 38 58 Z" fill="#0B5FA5"/><circle cx="55" cy="30" r="7" fill="#0B5FA5"/></svg>
     </div>
     <span class="footer-brand-text">Dedicare <b>Solutions</b></span>
   </div>
   <div class="footer-links">
     <a href="index.html">Home</a>
     <a href="privacy-policy.html">Privacy Policy</a>
+    <a href="cookie-policy.html">Cookie Policy</a>
     <a href="mailto:info@dedicaresolutions.it">Contatti</a>
   </div>
   <div class="footer-copy">Copyright Reserved ©. 2026, Dedicare Solutions — Tutti i diritti riservati.</div>
