@@ -327,6 +327,54 @@ sub,sup{font-size:.72em;line-height:0;position:relative;vertical-align:baseline;
 .hero-wordmark{display:block;max-width:160px;height:auto;margin:-4px 0 20px;filter:drop-shadow(0 2px 12px rgba(0,0,0,.3));opacity:.95;transition:opacity .3s ease,transform .35s cubic-bezier(.34,1.56,.64,1);}
 .hero-wordmark:hover{opacity:1;transform:scale(1.04);}
 @media(max-width:600px){.hero-wordmark{max-width:150px;}}
+
+/* ─── DESKTOP HERO (≥1024px) ──────────────────────────────────────────── */
+@media(min-width:1024px){
+  .hero{
+    min-height:100vh;
+    padding:0 6%;
+    justify-content:center;
+  }
+  .hero-content{
+    max-width:760px;
+    padding:140px 0 100px;
+  }
+  .hero-logo-big{
+    width:96px;
+    height:96px;
+    margin-bottom:20px;
+  }
+  .hero-wordmark{
+    max-width:240px;
+    margin:0 0 26px;
+  }
+  .hero-badge{
+    font-size:12px;
+    padding:9px 22px;
+    margin-bottom:30px;
+  }
+  .hero h1{
+    font-size:clamp(3rem,5.5vw,5.6rem);
+    margin-bottom:26px;
+    line-height:1.08;
+  }
+  .hero-sub{
+    font-size:17px;
+    max-width:600px;
+    margin-bottom:44px;
+  }
+  .hero-btns{gap:16px;}
+  .btn-primary,.btn-outline{
+    padding:18px 38px;
+    font-size:14px;
+  }
+}
+
+@media(min-width:1440px){
+  .hero-content{max-width:860px;}
+  .hero h1{font-size:clamp(4rem,5vw,6.4rem);}
+  .hero-sub{font-size:18px;}
+}
 </style>
 </head>
 <body>
